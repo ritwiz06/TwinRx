@@ -1,0 +1,50 @@
+# Secrets
+.env
+
+# Raw downloads and locked answers. Folders stay, contents are ignored.
+data/raw/*
+!data/raw/.gitkeep
+data/locked/*
+!data/locked/.gitkeep
+
+# Cached model calls
+.cache/
+
+# Large files inside run outputs (see DECISIONS D-001).
+# Small text outputs (csv, json, txt, md, log) stay in git.
+runs/*/outputs/**/*.h5ad
+runs/*/outputs/**/*.h5
+runs/*/outputs/**/*.parquet
+runs/*/outputs/**/*.feather
+runs/*/outputs/**/*.arrow
+runs/*/outputs/**/*.npy
+runs/*/outputs/**/*.npz
+runs/*/outputs/**/*.pt
+runs/*/outputs/**/*.pth
+runs/*/outputs/**/*.ckpt
+runs/*/outputs/**/*.svs
+runs/*/outputs/**/*.tif
+runs/*/outputs/**/*.tiff
+runs/*/outputs/**/*.zip
+runs/*/outputs/**/*.gz
+runs/*/outputs/**/*.tar
+runs/*/outputs/**/*.duckdb
+runs/*/outputs/**/*.mp4
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# App
+app/node_modules/
+app/dist/
+
+# OS and editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
